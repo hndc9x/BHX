@@ -16,6 +16,8 @@ function HomeScreen() {
         <Button title="Drawer" onPress={() => navigation.openDrawer()} />
         <Text> </Text>
         <Button title="Stack" onPress={() => navigation.navigate('Modal')} />
+        <Text> </Text>
+        <Button title="Web View" onPress={() => navigation.navigate('Web')} />
       </ImageBackground>
     </View>
   );

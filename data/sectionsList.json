@@ -1,0 +1,10 @@
+[
+    {
+      "title": "Food",
+      "data": ["Pizza", "Fried Chicken", "Cake"]
+    },
+    {
+      "title": "Drinks",
+      "data": ["Water", "Coke", "Beer"]
+    }
+]

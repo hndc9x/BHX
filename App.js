@@ -9,7 +9,14 @@ import ActiviIndicator from './screens/ActivityIndicator';
 import FlatList from './screens/FlastList';
 import Keyboard from './screens/Keyboard';
 import Modal from './screens/Modal';
+import TheSectionList from './screens/SectionList';
 import {ModalPortal} from 'react-native-modals';
+import Web from './screens/WebView';
+//linkdeep
+import linking from './linking';
+//user
+import User from './screens/User';
+import UserDetails from './screens/UserDetails';
 
 import Header from './components/Header';
 
@@ -18,18 +25,16 @@ const Stack = createStackNavigator();
 
 const rootStack = () => {
   return (
-    <NavigationContainer>
+    <NavigationContainer linking={linking}>
       <Stack.Navigator
         screenOptions={{
           backgroundColor: '#D5D1D1',
           headerLeft: () => <Header />,
         }}>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Alert" component={Alert} />
-        <Stack.Screen name="ActiviIndicator" component={ActiviIndicator} />
-        <Stack.Screen name="FlatList" component={FlatList} />
-        <Stack.Screen name="Keyboard" component={Keyboard} />
         <Stack.Screen name="Modal" component={Modal} />
+        <Stack.Screen name="Web" component={Web} />
+        <Stack.Screen name="User" component={User} />
+        <Stack.Screen name="UserDetails" component={UserDetails} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -38,7 +43,7 @@ const rootStack = () => {
 const App = () => {
   return (
     <React.Fragment>
-      <NavigationContainer>
+      {/* <NavigationContainer>
         <Drawer.Navigator
           initialRouteName="Home"
           drawerStyle={{
@@ -50,8 +55,24 @@ const App = () => {
           <Drawer.Screen name="FlatList" component={FlatList} />
           <Drawer.Screen name="Keyboard" component={Keyboard} />
           <Drawer.Screen name="Modal" component={Modal} />
-          <Drawer.Screen name=" " component={rootStack} />
+          <Drawer.Screen name="SectionList" component={TheSectionList} />
+          <Drawer.Screen name="User" component={User} />
+          <Drawer.Screen name="UserDetails" component={UserDetails} />
+          <Drawer.Screen name="Stack" component={rootStack} />
+          <Drawer.Screen name="Web" component={Web} />
         </Drawer.Navigator>
+      </NavigationContainer> */}
+      <NavigationContainer linking={linking}>
+        <Stack.Navigator
+          screenOptions={{
+            backgroundColor: '#D5D1D1',
+            headerLeft: () => <Header />,
+          }}>
+          <Stack.Screen name="Modal" component={Modal} />
+          <Stack.Screen name="Web" component={Web} />
+          <Stack.Screen name="User" component={User} />
+          <Stack.Screen name="UserDetails" component={UserDetails} />
+        </Stack.Navigator>
       </NavigationContainer>
       <ModalPortal />
     </React.Fragment>
