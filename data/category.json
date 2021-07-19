@@ -1,0 +1,32 @@
+[
+    {
+        "id" : 1,
+        "name" : "Thịt, Cá, Trứng, Rau",
+        "child" : [
+            {
+                "name" : "Rau xanh các loại",
+                "image" : "../assets/img/category/rauxau.jpg"
+            },
+            {
+                "name" : "Thịt gà các loại",
+                "image" : ""
+            },
+            {
+                "name" : "Cá, tôm, mực, ếch",
+                "image" : ""
+            },
+            {
+                "name" : "Thịt heo các loại",
+                "image" : ""
+            },
+            {
+                "name" : "Thịt bò các loại",
+                "image" : ""
+            },
+            {
+                "name" : "Trứng",
+                "image" : ""
+            }
+        ]
+    }
+]
